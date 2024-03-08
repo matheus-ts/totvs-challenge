@@ -1,4 +1,5 @@
-export interface Options{
-    label: string;
-    value: string;
+export interface Options {
+  label: string;
+  value: string;
+  disabled: boolean;
 }

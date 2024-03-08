@@ -5,14 +5,17 @@ import { Options } from 'src/app/utils/models/options.model';
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
- 
-  options: Options[] = []
+  test: string = '';
+  options: Options[] = [];
 
   ngOnInit(): void {
-    this.options = optionsMock
+    this.options = optionsMock;
   }
 
+  changeValue(event: any) {
+    console.log(this.test);
+  }
 }

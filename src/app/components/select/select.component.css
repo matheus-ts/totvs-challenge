@@ -1,46 +1,46 @@
-select{
-    width: 230px;
-    height: 40px;
-    font-size: 1rem;
-    border-radius: 4px;
-    border: 1px solid #7B7B89;
-    color: #1D1D30;
-    padding: 5px 5px;
-    background-color: #F0F1F1;
-    font-weight: 500;
-    background-image: url('../../../assets/icons/arrow-down.svg');
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none;
+select {
+  width: 14rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #7b7b89;
+  color: #1d1d30;
+  padding: 0.625rem 0.625rem;
+  background-color: #f0f1f1;
+  font-weight: 500;
+  background-image: url("../../../assets/icons/arrow-down.svg");
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: right 0.625rem center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-select:focus{
-    outline: 2px solid;
-    outline-offset: 2px;
-    transition: 0   ;
-}   
-
-select:hover{
-    background-color: #EBEBF5;
-    transition: 0.1s ease-in-out;
-    cursor: pointer;
-    border: 1px solid #1F1F7A;
+select:focus {
+  outline: 2px solid;
+  outline-offset: 0.25rem;
+  transition: 0s;
 }
 
-select:disabled{
-    cursor: not-allowed;
-    border: 1px solid #C3C3CD;
-    background-color: #D0D0D7;
+select:hover {
+  background-color: #ebebf5;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #1f1f7a;
+}
+
+select:disabled {
+  cursor: not-allowed;
+  border: 1px solid #c3c3cd;
+  background-color: #d0d0d7;
 }
 
 option:disabled {
-    color: #B4B4C0;
+  color: #b4b4c0;
 }
 
-.error{
-    border: 1px solid #f00;
-    background-image: url('../../../assets/icons/arrow-down-error.svg');
+.error {
+  border: 1px solid #f00;
+  background-image: url("../../../assets/icons/arrow-down-error.svg");
 }

@@ -1,4 +1,22 @@
-<select [disabled]="disabled" [class.error]="error">
-    <option [value]="null" disabled selected>{{placeholder}}</option>
-    <option *ngFor="let option of options" [disabled]="option.disabled" [value]="option.value">{{ option.label }}</option>
+<select
+  (change)="onSelectionChange($event)"
+  [disabled]="disabled"
+  [class.error]="error"
+  (keydown)="onKeyDown($event)"
+  [attr.aria-label]="placeholder"
+>
+  >
+  <option [value]="null" disabled selected [hidden]="hidePlaceholder">
+    {{ placeholder }}
+  </option>
+  <option
+    *ngFor="let option of options; let i = index"
+    [disabled]="option.disabled"
+    [value]="option.value"
+    [attr.tabindex]="option.disabled ? '-1' : '0'"
+    [attr.aria-selected]="option === selectedOption ? 'true' : 'false'"
+    [attr.id]="'option-' + i"
+  >
+    {{ option.label }}
+  </option>
 </select>
