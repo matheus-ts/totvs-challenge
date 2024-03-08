@@ -71,6 +71,15 @@
           (changeValue)="valueChangedSwitch($event)"
         ></app-switch>
       </div>
+      <div>
+        <h3 class="subtitle-component">Switch Button Without Label</h3>
+        <app-switch
+          [(ngModel)]="checkedWithoutLabel"
+          [hasLabel]="false"
+          [disabled]="false"
+          (changeValue)="valueChangedSwitch($event)"
+        ></app-switch>
+      </div>
     </div>
   </div>
 </div>

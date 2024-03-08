@@ -12,6 +12,7 @@ export class FilterComponent implements OnInit {
   checked: boolean = false;
 
   checkedDisabled: boolean = false;
+  checkedWithoutLabel: boolean = false;
 
   options: Options[] = [];
   optionsDisabled: Options[] = [];
