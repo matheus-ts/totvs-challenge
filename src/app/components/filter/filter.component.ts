@@ -11,6 +11,8 @@ export class FilterComponent implements OnInit {
   test: string = '';
   checked: boolean = false;
 
+  checkedDisabled: boolean = false;
+
   options: Options[] = [];
   optionsDisabled: Options[] = [];
 

@@ -3,10 +3,10 @@ select {
   height: 2.5rem;
   font-size: 1rem;
   border-radius: 0.25rem;
-  border: 1px solid #7b7b89;
-  color: #1d1d30;
+  border: 0.0625rem solid var(--select-border);
+  color: var(--select-color);
   padding: 0.625rem 0.625rem;
-  background-color: #f0f1f1;
+  background-color: var(--select-background);
   font-weight: 500;
   background-image: url("../../../assets/icons/arrow-down.svg");
   background-size: 1.25rem;
@@ -18,29 +18,29 @@ select {
 }
 
 select:focus {
-  outline: 2px solid;
+  outline: 0.125rem solid;
   outline-offset: 0.25rem;
   transition: 0s;
 }
 
 select:hover {
-  background-color: #ebebf5;
+  background-color: var(----hover-background-color);
   transition: 0.1s ease-in-out;
   cursor: pointer;
-  border: 1px solid #1f1f7a;
+  border: 0.0625rem solid var(--hover-border-color);
 }
 
 select:disabled {
   cursor: not-allowed;
-  border: 1px solid #c3c3cd;
-  background-color: #d0d0d7;
+  border: 0.0625rem solid var(--disabled-border-color);
+  background-color: var(--disabled-background-color);
 }
 
 option:disabled {
-  color: #b4b4c0;
+  color: var(--disabled-option-color);
 }
 
 .error {
-  border: 1px solid #f00;
+  border: 0.0625rem solid var(--error-color);
   background-image: url("../../../assets/icons/arrow-down-error.svg");
 }
