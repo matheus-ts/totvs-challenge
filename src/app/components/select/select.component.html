@@ -1,0 +1,4 @@
+<select [disabled]="disabled" [class.error]="error">
+    <option [value]="null" disabled selected>{{placeholder}}</option>
+    <option *ngFor="let option of options" [disabled]="option.disabled" [value]="option.value">{{ option.label }}</option>
+</select>

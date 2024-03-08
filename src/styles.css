@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-background: #F9F3E7;
+    --secondary-background: #292023;
+    --primary-text: #2C2421;
+    --secondary-text: #FFF4E6;
+    --primary-color: #4269E0;
+    --secondary-color: #D042E0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    font-family: "Roboto", sans-serif;
+}
