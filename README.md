@@ -1,3 +1,7 @@
+## Preview
+
+![Preview](https://raw.githubusercontent.com/matheus-ts/totvs-challenge/main/src/assets/preview.png)
+
 ## Pré-requisitos
 
 Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em sua máquina. Caso contrário, você pode instalá-los seguindo as instruções nos links abaixo:
