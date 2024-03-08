@@ -1,4 +1,20 @@
-<div class="switch">
-  <input [disabled]="disabled" type="checkbox" id="toggleSwitch" />
+<div
+  class="switch"
+  [attr.aria-checked]="!disabled"
+  [attr.aria-label]="check ? 'Ativar Switch' : 'Desativar Switch'"
+>
+  <input
+    type="checkbox"
+    aria-hidden="true"
+    id="toggleSwitch"
+    [checked]="check"
+    [disabled]="disabled"
+    [(ngModel)]="check"
+    (keydown)="toggle($event)"
+    (click)="toggle($event)"
+  />
   <label class="slider" for="toggleSwitch"></label>
+  <label class="toggle-label" *ngIf="hasLabel" for="toggleSwitch">{{
+    check ? labelChecked : labelUnchecked
+  }}</label>
 </div>

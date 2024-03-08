@@ -5,14 +5,72 @@
     </section>
   </div>
   <div class="row mt-5">
-    <app-select
-      (change)="changeValue($event)"
-      [(ngModel)]="test"
-      [hidePlaceholder]="true"
-      [options]="options"
-    ></app-select>
+    <div class="d-flex">
+      <div>
+        <h3 class="subtitle-component">Select Default</h3>
+        <app-select
+          (change)="changeValue($event)"
+          [(ngModel)]="test"
+          [hidePlaceholder]="true"
+          [options]="options"
+        ></app-select>
+      </div>
+      <div>
+        <h3 class="subtitle-component">Select With Error</h3>
+        <app-select
+          (change)="changeValue($event)"
+          [(ngModel)]="test"
+          [error]="true"
+          [hidePlaceholder]="true"
+          [options]="options"
+        ></app-select>
+      </div>
+      <div>
+        <h3 class="subtitle-component">Select Disabled</h3>
+        <app-select
+          (change)="changeValue($event)"
+          [(ngModel)]="test"
+          [disabled]="true"
+          [hidePlaceholder]="true"
+          [options]="options"
+        ></app-select>
+      </div>
+      <div>
+        <h3 class="subtitle-component">Options Disabled</h3>
+        <app-select
+          (change)="changeValue($event)"
+          [(ngModel)]="test"
+          [disabled]="false"
+          [hidePlaceholder]="true"
+          [options]="optionsDisabled"
+        ></app-select>
+      </div>
+    </div>
   </div>
   <div class="row mt-5">
-    <app-switch [disabled]="true"></app-switch>
+    <div class="d-flex">
+      <div>
+        <h3 class="subtitle-component">Switch Button Default</h3>
+        <app-switch
+          [(ngModel)]="checked"
+          [disabled]="false"
+          [hasLabel]="true"
+          [labelChecked]="'Desativar'"
+          [labelUnchecked]="'Ativar'"
+          (changeValue)="valueChangedSwitch($event)"
+        ></app-switch>
+      </div>
+      <div>
+        <h3 class="subtitle-component">Switch Button Disabled</h3>
+        <app-switch
+          [(ngModel)]="checked"
+          [hasLabel]="true"
+          [disabled]="true"
+          [labelChecked]="'Desativar'"
+          [labelUnchecked]="'Ativar'"
+          (changeValue)="valueChangedSwitch($event)"
+        ></app-switch>
+      </div>
+    </div>
   </div>
 </div>

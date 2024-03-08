@@ -9,7 +9,6 @@ input {
   position: absolute;
   width: 100%;
   cursor: pointer;
-  outline-offset: 6px;
   z-index: 2;
   height: 100%;
   appearance: none;
@@ -22,6 +21,10 @@ input:disabled {
 input:disabled + .slider:before {
   background-color: #d0d0d7;
   border: 0.0625rem solid #515161;
+}
+input:focus {
+  outline: 0.125rem solid #000;
+  outline-offset: 0.375rem;
 }
 
 .slider {
@@ -61,4 +64,11 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-position: center;
   transition: background-color 0.4s, transform 0.4s;
+}
+
+.toggle-label {
+  position: relative;
+  bottom: 0.1875rem;
+  left: 3.75rem;
+  font-weight: 500;
 }

@@ -9,10 +9,22 @@ import { Options } from 'src/app/utils/models/options.model';
 })
 export class FilterComponent implements OnInit {
   test: string = '';
+  checked: boolean = false;
+
   options: Options[] = [];
+  optionsDisabled: Options[] = [];
 
   ngOnInit(): void {
     this.options = optionsMock;
+
+    this.optionsDisabled = optionsMock.map((option) => {
+      const disabled = parseInt(option.value) % 2 !== 0;
+      return { ...option, disabled };
+    });
+  }
+
+  valueChangedSwitch(event: any) {
+    console.log(this.checked);
   }
 
   changeValue(event: any) {

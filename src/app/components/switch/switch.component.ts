@@ -21,16 +21,27 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class SwitchComponent {
   @Input() disabled: boolean = false;
-  @Output() valueChanged = new EventEmitter<any>();
-  selectedOption: boolean | null = false;
+
+  @Input() hasLabel: boolean = false;
+  @Input() labelChecked: string = '';
+  @Input() labelUnchecked: string = '';
+
+  @Output() changeValue = new EventEmitter<any>();
+
+  check: boolean | null = false;
 
   onChange: any = () => {};
   onTouch: any = () => {};
 
   onKeyDown(event: KeyboardEvent) {
     switch (event.key) {
-      case 'ArrowDown':
+      case 'Enter':
         event.preventDefault();
+        this.check = !this.check;
+        this.onChange(this.check);
+        this.onTouch();
+        console.log(this.check);
+        this.changeValue.emit(this.check);
         break;
       case 'Escape':
         event.preventDefault();
@@ -39,7 +50,7 @@ export class SwitchComponent {
   }
 
   writeValue(value: any): void {
-    this.selectedOption = value;
+    this.check = value;
   }
 
   registerOnChange(fn: any): void {
@@ -50,13 +61,15 @@ export class SwitchComponent {
     this.onTouch = fn;
   }
 
-  setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
-  }
-
-  onSelectionChange(event: any) {
-    this.selectedOption = event.target.value;
-    this.onChange(this.selectedOption);
+  toggle(event: any) {
+    if (event instanceof KeyboardEvent && event.key === 'Enter') {
+      event.preventDefault();
+      this.check = !this.check;
+    } else {
+      this.check = event.target.checked;
+    }
+    this.onChange(this.check);
     this.onTouch();
+    this.changeValue.emit(this.check);
   }
 }
