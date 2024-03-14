@@ -14,7 +14,7 @@ Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em 
 1. Clone o repositório:
 
 ```bash
-git clone 
+git clone https://github.com/matheus-ts/totvs-challenge.git
 ```
 
 2. Acesse o Diretório onde você escolheu fazer o clone do projeto
