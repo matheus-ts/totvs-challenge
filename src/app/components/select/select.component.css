@@ -24,7 +24,7 @@ select:focus {
 }
 
 select:hover {
-  background-color: var(----hover-background-color);
+  background-color: var(--hover-background-color);
   transition: 0.1s ease-in-out;
   cursor: pointer;
   border: 0.0625rem solid var(--hover-border-color);
