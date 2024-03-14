@@ -14,13 +14,13 @@ Antes de começar, certifique-se de ter o Node.js e o Angular CLI instalados em 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/matheus-ts/currency-converter.git
+git clone 
 ```
 
 2. Acesse o Diretório onde você escolheu fazer o clone do projeto
 
 ```bash
-cd caminho/do/seu/diretorio/currency-converter
+cd caminho/do/seu/diretorio/
 ```
 
 3. Instale as dependências
@@ -37,7 +37,7 @@ ng serve
 
 ## Contribuições
 
-Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de melhorias ou desejar adicionar novos recursos, sinta-se à vontade para abrir uma [issue](https://github.com/matheus-ts/currency-converter/issues) ou enviar um [pull request](https://github.com/matheus-ts/currency-converter/pulls).
+Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de melhorias ou desejar adicionar novos recursos, sinta-se à vontade para abrir uma [issue] ou enviar um [pull request].
 
 ## Licença
 
