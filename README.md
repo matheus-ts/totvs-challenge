@@ -37,7 +37,7 @@ ng serve
 
 ## Contribuições
 
-Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de melhorias ou desejar adicionar novos recursos, sinta-se à vontade para abrir uma [issue] ou enviar um [pull request].
+Contribuições são bem-vindas! Se você encontrar bugs, tiver sugestões de melhorias ou desejar adicionar novos recursos, sinta-se à vontade para abrir uma [issue](https://github.com/matheus-ts/totvs-challenge/issues).
 
 ## Licença
 
